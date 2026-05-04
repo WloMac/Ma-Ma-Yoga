@@ -8,7 +8,7 @@ export default function Navbar() {
       {/* NAVBAR */}
 
       <nav className="fixed top-0 w-full bg-beige/80 backdrop-blur-md flex justify-between items-center px-6 md:px-12 py-4 z-40">
-        <div className="text-brown font-semibold text-lg">{navData.logo}</div>
+        <div className="text-primary font-semibold text-lg">{navData.logo}</div>
 
         {/*Desktop*/}
         <div div className="hidden md:flex gap-6">
@@ -16,7 +16,7 @@ export default function Navbar() {
             <a
               key={index}
               href={link.href}
-              className="text-brown hover:opacity-70"
+              className="text-primary hover:opacity-70"
             >
               {link.label}
             </a>
@@ -25,7 +25,7 @@ export default function Navbar() {
 
         {/*Mobile button*/}
         <button
-          className="md:hidden text-brown text-2x1"
+          className="md:hidden text-primary text-2x1"
           onClick={() => setIsOpen(!isOpen)}
         >
           ☰
@@ -35,7 +35,7 @@ export default function Navbar() {
       <div
         className={`fixed inset-0 bg-beige flex flex-col items-center justify-center gap-8 text-xl transition duration-300 z-50 ${
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        } md:hidden`}
       >
         {/* CLOSE BUTTON */}
         <button
@@ -51,7 +51,7 @@ export default function Navbar() {
             key={index}
             href={link.href}
             onClick={() => setIsOpen(false)}
-            className="text-brown text-2xl"
+            className="text-primary text-2xl"
           >
             {link.label}
           </a>

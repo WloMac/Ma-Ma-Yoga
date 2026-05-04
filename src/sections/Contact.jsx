@@ -1,12 +1,13 @@
 import { contactData } from "../data/contact";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
-    _honey:"",
+    _honey: "",
   });
 
   const [status, setStatus] = useState("idle");
@@ -49,9 +50,16 @@ export default function Contact() {
     }
   };
   return (
-    <section id="contact" className="py-24 bg-white fade-sesction">
+    <motion.section
+      id="contact"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.8 }}
+      className="py-24 bg-white fade-sesction px-6 md:px-12"
+    >
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-3xl md:text-4xl text-brown mb-6">
+        <h2 className="font-serif text-3xl md:text-4xl text-primary mb-6">
           {contactData.title}
         </h2>
 
@@ -85,18 +93,18 @@ export default function Contact() {
             className="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-brown"
           />
           <input
-  type="text"
-  name="_honey"
-  value={formData._honey}
-  onChange={handleChange}
-  style={{ display: "none" }}
-  tabIndex="-1"
-  autoComplete="off"
-/>
+            type="text"
+            name="_honey"
+            value={formData._honey}
+            onChange={handleChange}
+            style={{ display: "none" }}
+            tabIndex="-1"
+            autoComplete="off"
+          />
 
           <button
             type="submit"
-            className="bg-brown text-white py-3 rounded-full mt-4 hover:opacity-90 transition"
+            className="bg-secondary text-white py-3 rounded-full mt-4 hover:opacity-90 transition"
             disabled={status === "sending"}
           >
             {status === "sending" ? "Wysyłanie..." : contactData.buttonText}
@@ -113,6 +121,6 @@ export default function Contact() {
           </p>
         )}
       </div>
-    </section>
+    </motion.section>
   );
 }

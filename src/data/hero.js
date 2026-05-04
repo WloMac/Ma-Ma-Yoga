@@ -1,5 +1,5 @@
 export const heroData = {
-    title: "Ma. Ma. Joga",
-    subtitle: "Znajdź równowagę w ciele i umyśle",
+    title: "Oddychaj. Czuj. Bądź.",
+    subtitle: "Odkryj przestrzeń, w której możesz być sobą — w ciele, w emocjach, w pełnej obecności",
     buttonText: "Zapisz się na zajęcia",
 }
