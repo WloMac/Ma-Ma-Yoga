@@ -36,7 +36,7 @@ export default function Footer() {
             <li>Email: mamayoga.kontakt@gmail.com
 </li>
             {/* <li>Tel: +48 123 456 789</li> */}
-            <li>Miasto: ŁÓDŹ</li>
+            {/* <li>Miasto: ŁÓDŹ</li> */}
           </ul>
         </div>
 
