@@ -21,7 +21,7 @@ export default function Footer() {
           <ul className="space-y-2 text-white/70">
             <li><a href="#about" className="hover:text-white transition">O mnie</a></li>
             <li><a href="#classes" className="hover:text-white transition">Zajęcia</a></li>
-            <li><a href="#kids" className="hover:text-white transition">Joga dla dzieci</a></li>
+            <li><a href="#kindergarten" className="hover:text-white transition">Joga dla dzieci</a></li>
             <li><a href="#blog" className="hover:text-white transition">Blog</a></li>
             <li><a href="#contact" className="hover:text-white transition">Kontakt</a></li>
           </ul>
@@ -33,9 +33,10 @@ export default function Footer() {
             Kontakt
           </h4>
           <ul className="space-y-2 text-white/70">
-            <li>Email: kontakt@mamajoga.pl</li>
-            <li>Tel: +48 123 456 789</li>
-            <li>Miasto: Warszawa</li>
+            <li>Email: mamayoga.kontakt@gmail.com
+</li>
+            {/* <li>Tel: +48 123 456 789</li> */}
+            <li>Miasto: ŁÓDŹ</li>
           </ul>
         </div>
 

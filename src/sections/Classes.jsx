@@ -24,6 +24,18 @@ export default function Classes() {
     return () => window.removeEventListener("keydown", handleKey);
   }, []);
 
+  // Blokowanie scrolla
+
+  useEffect(() => {
+    if (selectedClass) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => (document.body.style.overflow = "auto");
+  }, [selectedClass]);
+
   return (
     <section id="classes" className="py-24 bg-beige px-6 md:px-12">
       <div className="max-w-6xl mx-auto px-6 text-center">
@@ -41,35 +53,17 @@ export default function Classes() {
       {selectedClass && (
         <div
           onClick={closeModal}
-          style={{
-            position: "fixed",
-            inset: 0,
-            background: "rgba(0,0,0,0.45)",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            zIndex: 50,
-            opacity: isOpen ? 1 : 0,
-            transition: "opacity 0.3s ease",
-          }}
+          className={`fixed inset-0 bg-black/50 flex items-center justify-center z-50 transition-opacity duration-300 ${
+            isOpen ? "opacity-100" : "opacity-0"
+          }`}
         >
           <div
             onClick={(e) => e.stopPropagation()}
-            style={{
-              background: "white",
-              borderRadius: "16px",
-              width: "90%",
-              maxWidth: "680px",
-              maxHeight: "85vh",
-              overflowY: "auto",
-              position: "relative",
-              transform: isOpen
-                ? "translateX(0) scale(1)"
-                : "translateX(60px) scale(0.97)",
-              opacity: isOpen ? 1 : 0,
-              transition:
-                "transform 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease",
-            }}
+            className={`bg-white rounded-2xl w-[90%] max-w-2xl max-h-[85vh] overflow-y-auto relative transform transition-all duration-300 ${
+              isOpen
+                ? "translate-x-0 scale-100 opacity-100"
+                : "translate-x-10 scale-95 opacity-0"
+            }`}
           >
             {/* ZAMKNIJ */}
             <button
@@ -80,7 +74,7 @@ export default function Classes() {
             </button>
 
             {/* ZDJĘCIE */}
-            <div className="w-full h-64 rounded-t-2xl overflow-hidden">
+            <div className="w-full h-56 md:h-64 rounded-t-2xl overflow-hidden">
               <img
                 src={selectedClass.image}
                 className="w-full h-full object-cover"
@@ -92,7 +86,7 @@ export default function Classes() {
             </div>
 
             {/* TREŚĆ */}
-            <div className="p-8">
+            <div className="p-6 md:p-8">
               {/* TAG */}
               {selectedClass.tag && (
                 <span className="inline-block text-xs px-3 py-1 rounded-full bg-beige text-primary mb-4">

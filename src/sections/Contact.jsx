@@ -56,7 +56,7 @@ export default function Contact() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: false }}
       transition={{ duration: 0.8 }}
-      className="py-24 bg-white fade-sesction px-6 md:px-12"
+      className="py-24 bg-white fade-section px-6 md:px-12"
     >
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="font-serif text-3xl md:text-4xl text-primary mb-6">
@@ -104,7 +104,7 @@ export default function Contact() {
 
           <button
             type="submit"
-            className="bg-secondary text-white py-3 rounded-full mt-4 hover:opacity-90 transition"
+            className="inline-block w-full md:w-auto bg-primary text-white px-8 py-4 rounded-full text-lg font-medium mt-6 shadow-md hover:bg-primaryDark hover:shadow-xl hover:scale-105 transition duration-300 text-center"
             disabled={status === "sending"}
           >
             {status === "sending" ? "Wysyłanie..." : contactData.buttonText}

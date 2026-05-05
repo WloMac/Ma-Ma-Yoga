@@ -13,8 +13,8 @@ export default function Hero(){
   {/* Tło */}
   <div className="absolute inset-0">
     <img
-      src="/hero.jpg"
-      alt="Yoga"
+      src="/hero.png"
+      alt="Ma-Ma-Yoga"
       className="w-full h-full object-cover"
     />
     <div className="absolute inset-0 bg-white/60"></div>

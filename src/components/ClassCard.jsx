@@ -1,4 +1,4 @@
-export default function ClassCard({ title, description, image, onOpen }) {
+export default function ClassCard({ title, description, image, thumbnailImage, onOpen }) {
   return (
     <div className="group cursor-pointer flex flex-col items-center text-center">
 
@@ -7,7 +7,8 @@ export default function ClassCard({ title, description, image, onOpen }) {
         <img
           src={image}
           alt={title}
-          className="w-full aspect-[2/3] object-cover object-[center_60%] group-hover:scale-105 transition duration-300"
+          className="w-full aspect-[2/3] object-cover object-center group-hover:scale-105 transition duration-300"
+         style={{ objectPosition: thumbnailImage || "center" }}
         />
       </div>
 

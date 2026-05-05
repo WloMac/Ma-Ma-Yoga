@@ -1,11 +1,13 @@
 import { aboutData } from "../data/about";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { GiLotus, GiMeditation } from "react-icons/gi"
+import { FiSun, FiSmile } from "react-icons/fi"
 
 const sectionIcons = {
-  mothers: "◎",
-  kids: "◇",
-  practice: "◈",
+  mothers: <GiLotus />,
+  kids: <FiSun />,
+  practice: <GiMeditation />,
 };
 
 export default function About() {
