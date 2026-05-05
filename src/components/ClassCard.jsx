@@ -6,7 +6,7 @@ export default function ClassCard({ title, description, image, thumbnailImage, o
       <div className="overflow-hidden rounded-xl">
         <img
           src={image}
-          alt={title}
+          alt={`Zajęcia ${title} `}
           className="w-full aspect-[2/3] object-cover object-center group-hover:scale-105 transition duration-300"
          style={{ objectPosition: thumbnailImage || "center" }}
         />

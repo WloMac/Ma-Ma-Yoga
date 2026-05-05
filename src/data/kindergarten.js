@@ -30,7 +30,7 @@ export const kindergartenData = {
     "Zajęcia odbywają się w sali przedszkolnej — nie wymagają specjalnego sprzętu",
     "Czas trwania: 30–45 minut, dostosowany do wieku grupy",
     "Program łączy pozycje jogi, ćwiczenia oddechowe, relaksację i elementy storytellingu",
-    "Grupy do 15 dzieci — dbam o indywidualny kontakt z każdym dzieckiem",
+    "Odpowiednie grupy — dbam o indywidualny kontakt z każdym dzieckiem",
     "Zajęcia mogą być cykliczne (tygodniowe) lub w formie warsztatów",
   ],
   image: "/images/kindergarten.png",

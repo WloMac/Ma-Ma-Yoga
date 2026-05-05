@@ -49,7 +49,18 @@ export default function Classes() {
           ))}
         </div>
       </div>
-
+      
+      {/* SEO */}
+      <div className="hidden">
+        {classesData.map((item, i) => (
+          <div key={i}>
+            <h3>{item.title}</h3>
+            <p>{item.fullDescription}</p>
+            <p>{item.why}</p>
+            <p>{item.forWho}</p>
+          </div>
+        ))}
+      </div>
       {selectedClass && (
         <div
           onClick={closeModal}
@@ -77,6 +88,7 @@ export default function Classes() {
             <div className="w-full h-56 md:h-64 rounded-t-2xl overflow-hidden">
               <img
                 src={selectedClass.image}
+                alt={selectedClass.title}
                 className="w-full h-full object-cover"
                 style={{
                   objectPosition:
