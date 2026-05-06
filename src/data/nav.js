@@ -1,6 +1,6 @@
 
 export const navData = {
-  logo: "Ma. Ma. Yoga",
+  logo: "Ma.Ma. Yoga",
   links: [
     { label: "O mnie", href: "#about" },
     {label: "Joga dla dzieci", href: "#kindergarten"},
