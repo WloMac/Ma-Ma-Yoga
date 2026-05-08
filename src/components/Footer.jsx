@@ -47,7 +47,7 @@ export default function Footer() {
 
       {/* COPYRIGHT */}
       <div className="text-center text-white/60 text-sm">
-        © {new Date().getFullYear()} Ma.Ma.Joga — Wszystkie prawa zastrzeżone
+        © {new Date().getFullYear()} Ma.Ma. Yoga — Wszystkie prawa zastrzeżone
       </div>
     </footer>
   )
