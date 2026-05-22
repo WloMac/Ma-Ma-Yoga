@@ -6,7 +6,7 @@ export default function Footer() {
         {/* LOGO + OPIS */}
         <div>
           <h3 className="text-2xl font-semibold mb-4">
-            Ma.Ma.Joga
+            Ma.Ma Yoga
           </h3>
           <p className="text-white/70">
             Przestrzeń dla ciała i oddechu. Znajdź równowagę i spokój w codzienności.
